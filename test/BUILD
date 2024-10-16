@@ -139,7 +139,7 @@ py_test(
         "test_utils.py",
     ],
     imports = ["."],
-    deps = TEST_DEPS + ["@pypi_neuralgcm//:pkg"],
+    deps = TEST_DEPS + ["@pypi_neuralgcm//:pkg", "@pypi_gcsfs//:pkg"],
     timeout='long'
 )
 
