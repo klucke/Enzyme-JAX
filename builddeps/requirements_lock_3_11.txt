@@ -580,6 +580,7 @@ jax[cuda12-pip]==0.4.31 ; sys_platform == "linux" \
     #   e3nn-jax
     #   flax
     #   jax-md
+    #   jraph
     #   neuralgcm
     #   optax
     #   orbax-checkpoint
@@ -596,8 +597,8 @@ jax-cuda12-plugin[with-cuda]==0.4.31 \
     --hash=sha256:a3727a332fbeac625ab6d5ae63d0ed9e62d1e0b5011f72130c9bc96e797395d5 \
     --hash=sha256:cdb6d0c4009438a6a6bd7997ab8a1194beda9ae7322b8d265eea9e551b6c2b4e
     # via jax
-jax-md @ https://github.com/wsmoses/jax-md/archive/45059b8f63dad0b5cb171feafff71b82162487e7.tar.gz \
-    --hash=sha256:79b17dc0ce546574d4eda57c5b933ff93177fd19887ccf44a318ec8cb9c620df
+jax-md @ https://github.com/wsmoses/jax-md/archive/b41e23abc8662e767033c2bcf346eb58b32363a9.tar.gz \
+    --hash=sha256:b1f4ab3e7da97e95d1813b0c819d1838fe069c998474ae444760b107c4e42c7a
     # via -r builddeps/test-requirements.txt
 jaxlib==0.4.31 \
     --hash=sha256:185fb615ab6bd95315fbcbd951d84e71f9835d603db8c03c91faee98ce95ff4d \
@@ -623,6 +624,7 @@ jaxlib==0.4.31 \
     #   e3nn-jax
     #   jax
     #   jax-md
+    #   jraph
     #   neuralgcm
     #   optax
     #   orbax-checkpoint
@@ -634,6 +636,10 @@ joblib==1.4.2 \
     --hash=sha256:06d478d5674cbc267e7496a410ee875abd68e4340feff4490bcb7afb88060ae6 \
     --hash=sha256:2382c5816b2636fbd20a09e0f4e9dad4736765fdfb7dca582943b9c1366b3f0e
     # via scikit-learn
+# WARNING: pip install will require the following package to be hashed.
+# Consider using a hashable URL like https://github.com/jazzband/pip-tools/archive/SOMECOMMIT.zip
+jraph @ git+https://github.com/wsmoses/jraph@b00d9a03db76c69a258a86df81638b9a2f28829f
+    # via jax-md
 markdown-it-py==3.0.0 \
     --hash=sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1 \
     --hash=sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb
@@ -926,6 +932,7 @@ numpy==2.1.0 \
     #   jax-md
     #   jaxlib
     #   jmp
+    #   jraph
     #   ml-dtypes
     #   neuralgcm
     #   numcodecs
